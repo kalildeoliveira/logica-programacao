@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>01. Nomes e tipos de variáveis</title> 
+		<script type="text/javascript">
+			function acertou(){
+				const d = document.getElementById("resultado");				
+				d.innerHTML = "Certo!";
+				d.style.backgroundColor = 'green';
+		}		
+			function errou(){
+				const d = document.getElementById("resultado");
+				d.innerHTML = "Errado!";
+				d.style.backgroundColor = 'red';
+			}
+			function acertou2(){
+				const d2 = document.getElementById("resultado2");				
+				d2.innerHTML = "Certo!";
+				d2.style.backgroundColor = 'green';
+		}		
+			function errou2(){
+				const d2 = document.getElementById("resultado2");
+				d2.innerHTML = "Errado!";
+				d2.style.backgroundColor = 'red';
+			}
+		</script>
+	</head>
+	<body>
+		<style>
+			h1 {
+				font-family: Arial, Helvetica, sans-serif;
+			}
+			body{ 
+				background-color: #ccc; 
+				margin: 20px; 
+			}
+			span { 
+				font-family: sans-serif; 
+				background-color: lightblue; 
+				font-size: 15px; 
+				font-style: italic;
+			}
+			.resultado {
+				width: 70px;
+				text-align: center;
+				margin: 10px;
+			}
+			.espaco {
+				margin: 5px; 
+				margin-left: 20px;
+			}
+		</style>
+		<h1>Aula 1 - Nomes e tipos de Variáveis</h1>
+		<p> <strong>Se liga nestes tópicos: </strong></p>
+		<ul>
+			<li>Conceito: Se você lembrar das aulas de matemática lá no Ensino Fundamental, com certeza não vai ter dificuldade em entender o que são variáveis. Elas eram o "x" ou "y" nas suas equações. Fácil né? Elas servem como caixinhas ou espaços na memória para guardar dados. </li>
+			<li>Algns exemplos importantes são:
+				<ul><li><strong>String</strong> ou cadeia de caracteres, uteis para guardar o nome de uma pessoa ou para números cujo propósito não será fazer cálculos, como o CPF de alguém, por exemplo;</li>
+				<li> <strong>Inteiro</strong>, ideal para fazer contagem ou operações que não retornam fração ou números com vírgula;</li>
+				<li> <strong>Float</strong> ou Real para números com vírgula ou frações ou seja, que possa haver metade de um número, por exemplo ;</li>
+				<li> <strong>Boleana</strong> ou Lógica para guardar valor verdadeiro ou falso e ajudar nas decisões;</li>
+				<li> <strong>Array</strong>, vetores e matrizes que são estruturas para guardar vários dados, como uma tabela;</li>
+				<li> <strong>Objetos</strong> que imitam o mundo real e, além de valores ou atributos, são capazes de guardar comportamentos ou métodos.</li></ul>
+			<li>Quando vamos criar ou declarar uma variável é preciso cuidar para não deixar espaço nem usar caracteres especiais, acentuação ou iniciar com números. Os programas aceitam variáveis com $ e _, mas o mais correto é iniciar com minúsculo e, caso precisar de uma segunda palavra, usar uma maiúscula. Assim: <span>nomeUsuario</span>.</li>
+			<li>Uma sugestão é criar variáveis que sejam intuitivas, ou seja, <span>numeroId</span> é um bom nome para guardar um número de identificação e não "n". É claro que funciona e na hora você até vai lembrar, mas e depois? Lembre-se que os códigos não são eternos e precisam de manutenção no futuro.</li>
+			<li>Enfim, uma variável misteriosa vai dificultar que as pessoas entendam o seu código ou você mesmo quando precisar melhorá-lo.</li>
+			</li>
+		</ul>	
+			<p><strong>Interatividade!  </strong></p>
+			<ul>
+				<p class="espaco">Selecione e descubra as grafias corretas de variáveis:</p>
+				<div class="espaco">
+					<input type=radio name=nome  onClick="acertou()">A) nomeAluno1<br>
+					<input type=radio name=nome  onClick="errou()">B) nome Aluno 1<br>
+					<input type=radio name=nome  onClick="errou()">C) 1nome-aluno <br>
+					<input type=radio name=nome  onClick="acertou()">D) _nomeAluno1<br>
+					<input type=radio name=nome  onClick="errou()">E) nome%Aluno_1<br>
+					<input type=radio name=nome  onClick="acertou()">F) nomeAluno_1<br>
+				</div><div id="resultado" class="resultado"></div>
+			</ul>
+			<ul>
+				<p class="espaco">Marque para ver o uso correto de algumas variáveis:</p>
+				<div class="espaco">
+					<input type=radio name=nome  onClick="errou2()">A) string para operações matemáticas <br>
+					<input type=radio name=nome  onClick="errou2()">B) float para número de casa em um formulário <br>
+					<input type=radio name=nome  onClick="acertou2()">C) real para operações matemáticas <br>
+					<input type=radio name=nome  onClick="acertou2()">D) string para número de CPF do usuário <br>
+					<input type=radio name=nome  onClick="errou2()">E) inteiro para guardar nome do usuário <br>
+					<input type=radio name=nome  onClick="acertou2()">F) inteiro para contagem de alunos <br>
+					<input type=radio name=nome  onClick="errou2()">G) boleana para guardar números <br>
+					<input type=radio name=nome  onClick="acertou2()">H) array ou objetos para guardar dados diversos <br>
+					<input type=radio name=nome  onClick="acertou2()">I) boleana para guardar um valor lógico <br>
+				</div> <div id="resultado2" class="resultado"></div>
+			</ul>
+			<ul>			
+				<ul><li><a href="aula02.html" target="_blank" >Próxima aula : Atribuir valores às variáveis</a></li></ul>
+			</ul>
+	</body>
+</html>

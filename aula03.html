@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="style.css">
+		<title>03. Operações lógicas e aritméticas</title> 
+	</head>
+	<body>
+		<h1>Aula 3 - Operações lógicas e aritméticas</h1>		
+		<ul>
+			<p>Para trabalhar com os dados guardados nas variáveis, podemos fazer diversas coisas como comparações, escolhas, repetições e outros processos. Tal coisa é possível a partir de operadores. <br><br>
+			Pense no tempo do colégio. Operador era aquele "+" entre dois números que se usava para dizer que estava somando. Lembra? Só que neste caso muda um pouco porque depois de somar você não vai usar mais um "=" para mostrar o resultado, mas guardar em uma variável e exibí-la com o comando <span>escreva ()</span> <br/><br/>
+			Enfim, tal como na vida, em um programa de computador os operadores aritméticos são usados para somar, subtrair, multiplicar e dividir. E neste último caso, é possível usar operadores tanto para ver o resultado quanto o resto da divisão no caso de números inteiros. Veja o exemplo:
+			<ul> <div>algoritmo resto <br>
+			var numero, divisor : inteiro <br>	
+			inicio <br>			
+			<ul>
+				leia (numero, divisor) <br>
+				numero &larr; numero mod divisor <br>
+				escreva (numero)
+			</ul>
+			fim.</div><br></ul>
+			Neste caso as variáveis <span>numero, divisor</span> receberam um valor digitado pelo usuário. Digamos que sejam, respectivamente, os números 10 e 2. O resto da divisão será zero e será guardada na variável <span>numero</span> usando o comando <span>mod</span>. Escrevemos por cima do valor 10 que estava guardado, ou seja, um novo valor é sobrescrito na variável <span>numero</span> e exibido em seguida com o comando <span>escreva ()</span> na penúltima linha do programa. <br><br>
+			Como seria este código em C? Vejamos: <br> <br>
+			<ul> <div>#include &lt;stdio.h&gt; <br><br>
+				int main () { <br>
+				<ul>
+					int numero, divisor; <br>
+					scanf ("%d %d", &numero, &divisor); <br>
+					numero = numero % divisor; <br>
+					printf ("%d", numero); <br>
+				</ul>
+				} </div><br></ul>
+			O Javascript roda o mesmo programa da seguinte forma: <br><br>
+			<ul> <div>var numero = parseInt(prompt ()); <br>
+				var divisor = parseInt(prompt ()); <br>
+				numero = numero % divisor; <br>
+				console.log (numero); <br><br>				
+				</div><br></ul>
+			Neste código você pode perceber que o comando ou função para forçar o usuário a atribuir um valor à variável via teclado, <span>prompt ()</span>, roda dentro do comando <span>parseInt ()</span> pois o <span>prompt ()</span> recebe apenas string, texto, mesmo que seja digitado número e o <span>parseInt ()</span> faz a conversão para o tipo inteiro. <br><br>
+			É por isso que, em Javascript, quando alguém quiser somar duas strings que guardam o valor "2", o operador faz uma concatenação, ou seja, 2 + 2 = 22. Para o resultado ser 4, tem que converter inteiro ou real. Interessante também que, escrevendo <span>parseInt(prompt());</span> economizamos uma linha de código pois seria equivalente a escrever <span>var numero = prompt(); parseInt(numero);</span>. Percebe? <br><br>
+			As operações lógicas envolvem basicamente "e", "ou" e "não". Com uma estrutura de decisão, podemos usar bastante estas operações. Por exemplo, um aluno não pode ser aprovado se ele tiver média sem frequência. Conectando as duas variáveis com o operador lógico & resolvemos este problema. <br><br>
+			</p>
+		</ul>			
+			<ul><ul><li><a href="aula04.html" target="_blank" >Próxima aula : Controle de decisão</a></li></ul>
+		
+		</ul>
+		<script>
+		
+		</script>
+
+	</body>
+</html>

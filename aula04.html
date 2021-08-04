@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="style.css">
+		<title>04. Controle de decisão</title> 
+	</head>
+	<body>
+		<h1>Aula 4 - Controle de decisão</h1>
+		<ul>
+			<p> Em C ou Javascript usa-se <span>&&</span> como operador relacional. Imagine como isso pode ajudar no caso de um programa para gerenciar uma escola na qual seus alunos não podem ser aprovados com média sem frequência ou com frequência sem média. Conectando as duas variáveis com o operador lógico "e" resolvemos este problema. É o operador lógico que só vai permitir o fluxo se as duas condições forem atendidas ou verdadeiras.  <br><br>
+			Há também algumas situações nas quais apenas uma condição já tá valendo. É o caso de medir a febre de duas pessoas que precisam viajar juntas. Se uma ou as duas pessoas estiverem doentes, a viagem não acontece. O operador de disjunção "ou", que em C e em Javascript se escreve repetindo o símbolo de barra vertical <span>| |</span> , dá sequência ao código bastando que uma condição seja verdadeira. <br><br>
+			Veja como fica este raciocínio quando usamos "ou" associado ao operador de negação "não" e um controle de decisão simples com "se... senão...": <br>
+			<ul> <div>algoritmo medidorDeFebre <br>
+			var pessoa1, pessoa2 : lógico <br>
+			inicio <br>
+			<ul>				
+				se não(pessoa1 ou pessoa2) então <br> <ul>
+					escreva ("Viagem acontece") <br> </ul> <ul>
+						senao <br> <ul>
+						escreva ("Viagem não acontece") <br> </ul> </ul>
+						<ul>fim se</ul>
+				fim se </ul> 
+			fim
+			</ul></div></ul>
+			<ul>
+			Considerando que o valor da febre seja Verdadeiro, note que basta uma pessoa ter febre para a viagem não acontecer ou ainda é preciso que as duas estejam com saúde para a viagem acontecer. <br><br>
+			Seria o mesmo que escrever o código assim: <br> <br>
+			<ul> <div>algoritmo aprovação <br>
+				var media, frequencia : lógico <br>
+				inicio <br>
+				<ul>				
+					se (media e frequencia) então <br> <ul>
+						escreva ("Aprovado") <br> </ul> <ul>
+							senao <br> <ul>
+							escreva ("Reprovado") <br> </ul> </ul>
+							<ul>fim se</ul>
+					fim se </ul> 
+				fim
+				</ul></div></ul>
+			<ul>
+			A solução em Javascript fica até bem parecida como o que foi escrito no pseudocódigo: <br><br>
+			<ul> <div>var media = frequencia = true; <br>
+				if (media && frequencia) { <br> <ul>
+					console.log ("Aprovado"); <br> </ul>
+				} else { <br> <ul>
+					console.log ("Reprovado"); <br></ul>
+				}
+				</div><br></ul>
+			Acima, da direita para a esquerda, o valor lógico <span>true</span> é atribuído à variável <span>frequencia</span> e depois <span>media</span> de modo que as duas passam a ter o mesmo valor. Para ter resultado semelhante, no caso da linguagem C, ao invés de conferir se é verdadeiro ou falso, guarda-se o valor 0 ou 1, como neste programa: <br> <br>
+			<ul> <div>#include &lt;stdio.h&gt; <br><br>
+				int main () { <br>
+				<ul>
+					int media = 1, frequencia = 1; <br>
+					if ((media ==1)&&(frequencia==1)) { <ul>
+						printf ("Aprovado"); </ul>
+					} else { <ul>					
+						printf ("Reprovado");</ul>
+					}
+					</ul>
+				
+				}</ul></div><br></ul>
+			 <ul>
+			Antes de seguirmos para o próximo tópico, já dá para construirmos nosso primeiro fluxograma. Na figura abaixo é possível perceber melhor a instrução de controle em um losango com desvios, como numa bifurcação de uma rodovia, ou seja, só duas opções: Falso ou Verdadeiro. <br><br>
+			<figure>
+				<img src="fluxograma1.jpg" alt="Fluxograma 01">
+				<figcaption>Observe a instrução de controle e desvios. </figcaption>
+			</figure>
+								
+			<ul><ul><li><a href="aula05.html" target="_blank" >Próxima aula : Estruturas de repetição</a></li></ul>
+		
+		</ul></p>
+		</ul>	
+		<script>
+		
+		</script>
+
+	</body>
+</html>

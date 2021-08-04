@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="style.css">
+		<title>02. Atribuir valores às variáveis</title> 
+	</head>
+	<body>
+		<h1>Aula 2 - Atribuir valores às variáveis</h1>		
+		<ul>
+			<p>Uma forma comum de iniciar um programa é declarando e iniciando as variáveis. Trata-se do processo de entrada de dados. Em seguida, o código pode prever as regras ou processos a partir dos dados informados e, finalmente, as saídas para o usuário. <br/><br/>
+			Em pseudocódigo uma declaração com atribuição fica assim:
+			<ul> <div>algoritmo exemplo <br>
+			var nomeUsuario : caracter <br>	
+			inicio <br>			
+			<ul>
+				nomeUsuario &larr; João
+			</ul>
+			fim.</div><br></ul>
+			Neste caso a variável <span>nomeUsuario</span> recebeu um dado de tipo string ou cadeia de caracteres diretamente no código. Mas poderíamos dar a entrada deste dado pelo teclado, ou seja, a partir do comando  <span>leia ()</span> forçamos o usuário a digitar seu nome. Fica assim: <br><br>
+			<ul> <div>algoritmo exemplo <br>
+				var nomeUsuario : caracter <br>	
+				inicio <br>			
+				<ul>
+					leia (nomeUsuario)
+				</ul>
+				fim.</div><br></ul>
+			Num caminho parecido ao pseudocódigo, a linguagem C exige, porém, o uso dos comandos em inglês e aspectos de sintaxe, como o uso do ponto e vírgula ao final de uma instrução, mas a lógica é a mesma para o que fizemos acima, ou seja, declarar uma variável e guardar um dado informado pelo usuário via teclado. O comando <span>leia ()</span> escreve-se <span>scanf ()</span>. Veja como fica o mesmo código: <br><br>
+			<ul> <div>#include &lt; stdio.h &gt; <br><br>
+				int main () { <br>							
+				<ul>
+					char nomeUsuario; <br>
+					scanf ("%s", &nomeUsuario); <br>
+				</ul>
+				}</div><br></ul>
+			Algo interessante no caso de Javascript é que o programador define o tipo de variável no momento que atribui o seu valor, sem precisar declarar antes, como vimos nas linguagens acima. Uma forma de escrever aquele programinha que guarda o nome de um usuário em uma variável, portanto, vai exige apenas uma linha com o mesmo resultado prático: <br><br>
+			<ul> <div>var nomeUsuario = prompt (); <br></div><br></ul>
+			Como se vê acima, <span>prompt ()</span> é o comando que vai exigir do usuário digitar seu nome, que será guardado na variável <span>nomeUsuario</span> e imediatamente identificada pelo computador como string, pois seu conteúdo é um conjunto de caracteres, um texto.
+			</p>
+		</ul>			
+			<ul><ul><li><a href="aula03.html" target="_blank" >Aula 3 - Operações lógicas e aritméticas</a></li></ul>	
+		
+		</ul>
+		<script>
+		
+		</script>
+
+	</body>
+</html>

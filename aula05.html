@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="style.css">
+		<title>05. Estruturas de repetição</title>
+	</head>
+	<body>
+		<h1>Aula 5 - Estruturas de repetição</h1>
+		<ul>
+			<p> Uma pessoa bem atenta deve ter percebido na aula anterior que já possui o suficiente para resolver praticamente qualquer problema com programação, afinal já sabe fazer um sistema que recebe uma entrada, faz um processamento e devolve algo ao usuário. O que vem agora, então, é para agregar, aprimorar, aperfeiçoar os códigos. <br><br>
+			Tem a ver principalmente em tornar a vida mais fácil. Afinal, pense o tamanho do código se for preciso criar decisões de aprovação ou reprovação para uma escola com milhares de alunos! Quantos "se...então..." seriam utilizados! Quantas linhas de código! Quanto trabalho!  <br><br>
+			As estruturas de repetição são, potanto, a salvação. Graças a elas, podemos repetir uma condição até que o usuário esteja totalmente satisfeito ou todas as possibilidades tenham sido atendidas. E o melhor: sem precisar repetir o código para cada condição. Basta dar o loop, o giro, para tudo se repetir. <br><br>
+			Veja este código: <br>
+			<ul> <div>algoritmo mediaCom5Notas <br>
+			var contador : inteiro <br>
+			var nota [5] : real <br>
+			nota[0]&larr;0 <br>
+			inicio <br>
+			<ul>				
+				para contador&larr;1 ate 5 faça <br> <ul>
+					escreva ("Nota:") <br>
+					leia (nota[contador]) <br>
+					nota[0]&larr;nota[0]+nota[contador]<br></ul>
+				fim para <br>
+				nota[0]&larr;nota[0]/5 <br>
+				se (nota[0] >=6) entao <ul>
+						escreva ("Aprovado")</ul> 
+						senao	<ul> 
+							escreva ("Reprovado") <br>
+							fim se</ul>
+				fim se </ul>
+			fim
+			</div></ul> <br>
+
+			Perceba que colocamos as notas dentro do array <span>nota[5]</span>, do tipo real e de seis posições, sendo os índices 1 a 5 para receber as cinco notas e a posição 0 para acumular os valores digitados. <br><br>
+			Obviamente que esta solução serve apenas quando o desenvolvedor sabe que são cinco notas a serem digitadas. E se ele quiser deixar isso para o usuário? Neste caso, basta criar uma variável para determinar o tamanho do array e a quantidade de voltas na instrução "para... faça" ou como condição para parar os giros do comando "enquanto... faça" ou "faça... enquanto". <br><br>
+			Vejamos o código de um "enquanto... faça": <br> <br>
+			<ul> <div>algoritmo mediaComVariasNotas <br>
+				var contador, qtdNotas : inteiro <br>
+				var nota [ ] : real <br>
+				contador &larr; 0 <br>
+				inicio <br><ul>
+					escreva ("Quantidade de notas: ") <br>
+					leia (qtdNotas) <br>
+					enquanto (qtdNotas != contador) faça <br> <ul>
+						contador++ <br>
+						escreva ("Nota:") <br>
+						leia (nota[contador]) <br>
+						nota[0]&larr;nota[0]+nota[contador]<br></ul>
+					fim enquanto <br> 
+					nota[0]&larr;nota[0]/qtdNotas <br>
+					se (nota[0] >=6) entao <ul>
+							escreva ("Aprovado")</ul> 
+							senao	<ul> 
+								escreva ("Reprovado") <br>
+							fim se</ul>
+					fim se</ul>
+				fim
+				</div> <br> </ul>
+			Transcrevendo o código para Javascript: <br><br>
+			<ul> <div>console.log ("Quantidade de notas: "); <br>
+				qtdNotas = parseInt(prompt ()); <br>
+				nota = [ ]; <br>
+				nota [0] = contador = 0; <br>
+				while (contador != qtdNotas) { <ul>
+				  contador++; <br>
+				  console.log ("Nota: "); <br>
+				  nota [0] = nota [0] + (nota[contador] = parseInt (prompt())); </ul>
+				} <br>
+				nota[0] = (nota[0]/qtdNotas); <br>
+				if (media >= 6) { <ul>
+					console.log ("Aprovado!"); </ul>
+				} else { <ul>
+					console.log ("Reprovado"); </ul>
+				}
+				</div><br> </ul> </ul> 
+			<ul>
+			E, finalmente, para a linguagem C, vamos experimentar o "para...faça" e ver como é que fica o código: <br> <br>
+			<ul> <div>#include &lt;stdio.h&gt; <br><br>
+				int main () { <br> <ul>
+					int qtdNotas; <br>
+					printf ("\nQuantidade de notas: "); <br>
+					scanf ("%d", &qtdNotas); <br>
+					float nota[qtdNotas]; <br>
+					nota[0]=0; <br>
+					for (int cont=1; qtdNotas >=cont; contr++) { <ul>
+						printf ("Nota: "); <br>
+						scanf ("%f", & nota[cont]); <br>
+						nota[0]=nota[0]+nota[cont];</ul>
+					} <br>
+					nota[0] =nota[0]/qtdNotas; <br>
+					if (nota[0] >=6) { <ul>
+						printf ("\nAprovado");</ul>
+					} else { <ul>
+						printf ("\nReprovado");</ul>
+					} </ul>				
+				}</ul></div><br></ul>
+			 <ul>
+			
+			<ul><ul><li><a href="aula06.html" target="_blank" >Próxima aula : Funções</a></li></ul>
+		
+		</ul></p>
+		</ul>	
+		<script>
+		
+		</script>
+
+	</body>
+</html>
